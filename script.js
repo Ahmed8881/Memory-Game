@@ -1,5 +1,5 @@
-class MemoryGame {
-           constructor() {
+  class MemoryGame {
+            constructor() {
                 this.currentLevel = 'easy';
                 this.cards = [];
                 this.flippedCards = [];
@@ -20,11 +20,13 @@ class MemoryGame {
                 
                 this.init();
             }
-             init() {
+
+            init() {
                 this.bindEvents();
                 this.createBoard();
                 this.updateStats();
             }
+
             bindEvents() {
                 document.querySelectorAll('.level-btn').forEach(btn => {
                     btn.addEventListener('click', (e) => {
@@ -41,8 +43,7 @@ class MemoryGame {
                 });
             }
 
-
- setLevel(level) {
+            setLevel(level) {
                 this.currentLevel = level;
                 document.querySelectorAll('.level-btn').forEach(btn => {
                     btn.classList.remove('active');
@@ -54,6 +55,7 @@ class MemoryGame {
                 
                 this.resetGame();
             }
+
             createBoard() {
                 const level = this.levels[this.currentLevel];
                 this.totalPairs = level.pairs;
@@ -206,15 +208,3 @@ class MemoryGame {
         document.addEventListener('DOMContentLoaded', () => {
             new MemoryGame();
         });
-
-
-
-
-
-
-
-
-
-
-
-        }
