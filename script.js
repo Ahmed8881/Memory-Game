@@ -25,4 +25,33 @@ class MemoryGame {
                 this.createBoard();
                 this.updateStats();
             }
+            bindEvents() {
+                document.querySelectorAll('.level-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        this.setLevel(e.target.dataset.level);
+                    });
+                });
+
+                document.getElementById('resetBtn').addEventListener('click', () => {
+                    this.resetGame();
+                });
+
+                document.getElementById('overlay').addEventListener('click', () => {
+                    this.hideWinMessage();
+                });
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
         }
