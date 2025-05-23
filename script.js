@@ -1,4 +1,4 @@
-  class MemoryGame {
+class MemoryGame {
             constructor() {
                 this.currentLevel = 'easy';
                 this.cards = [];
