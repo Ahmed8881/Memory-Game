@@ -20,4 +20,9 @@ class MemoryGame {
                 
                 this.init();
             }
-}
+             init() {
+                this.bindEvents();
+                this.createBoard();
+                this.updateStats();
+            }
+        }
